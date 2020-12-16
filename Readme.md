@@ -1,5 +1,5 @@
 Hi!
-This repository is an exploration to fastapi librarie.
+This repository is an exploration of fastapi library.
 
 1. let's go to create an environment with conda
 
