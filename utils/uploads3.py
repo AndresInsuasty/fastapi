@@ -21,10 +21,17 @@ def delete_file(filename,bucket_name):
     except:
         return False
 
-bucket_name = 'pruebafastapi'
+def list_elements(bucket_name):
+    conn = boto3.client('s3')  
+    output=[]
+    for key in conn.list_objects(Bucket=bucket_name)['Contents']:
+        output.append(key['Key'])
+    return output
+
+bucket_name = 'udenar'
 filename = 'requirements.txt'
 
 #print(list_buckets())
 #upload_file(filename,bucket_name)
 #delete_file(filename,bucket_name)
-
+# print(list_elements(bucket_name))
