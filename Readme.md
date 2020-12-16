@@ -22,3 +22,13 @@ This repository is an exploration of fastapi library.
 ```uvicorn example:app --reload```
 
 the `--reload` is only for development, to refresh the changes made
+
+=====
+## Upload files to S3
+you will find a function into the utils folder called `uploads3.py` to use it please have in mind the libraries required:
+
+`pip install boto3`, moreover we need to have installed the AWS CLI in this case we use the version `2.1.11` and create credencials, `aws_access_key_id` and `aws_secret_access_key`. I created this into of IAM console.
+
+So open a terminal and write `aws configure` after this enter your keys. In the section of region I wrote `us-east-1`
+
+
