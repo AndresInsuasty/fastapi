@@ -1,16 +1,30 @@
 import boto3
 
-s3 = boto3.resource('s3')
+def list_buckets():
+    s3 = boto3.resource('s3')
+    output=[]
+    for bucket in s3.buckets.all():
+        output.append(bucket.name)
+    return output
 
-# list files
-print('='*50)
-print('List all the buckets created on your account')
-for id, bucket in enumerate(s3.buckets.all()):
-    print(id+1,bucket.name)
+def upload_file(filename,bucket_name):
+    s3 = boto3.resource('s3')
+    data = open(filename,'rb')
+    s3.Bucket(bucket_name).put_object(Key=filename,Body=data)
 
-# Upload a new file
+def delete_file(filename,bucket_name):
+    s3 = boto3.resource("s3")
+    try:
+        obj = s3.Object(bucket_name, filename)
+        obj.delete()
+        return True
+    except:
+        return False
+
 bucket_name = 'pruebafastapi'
 filename = 'requirements.txt'
-data = open(filename,'rb')
-s3.Bucket(bucket_name).put_object(Key=filename,Body=data)
+
+#print(list_buckets())
+#upload_file(filename,bucket_name)
+#delete_file(filename,bucket_name)
 
