@@ -30,5 +30,6 @@ you will find a function into the utils folder called `uploads3.py` to use it pl
 `pip install boto3`, moreover we need to have installed the AWS CLI in this case we use the version `2.1.11` and create credencials, `aws_access_key_id` and `aws_secret_access_key`. I created this into of IAM console.
 
 So open a terminal and write `aws configure` after this enter your keys. In the section of region I wrote `us-east-1`
+If you have issues with the functions of uploads3.py I recommend change the region of your bucket to `us-west-2`
 
 
