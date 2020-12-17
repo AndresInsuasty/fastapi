@@ -138,3 +138,9 @@ la respuesta sera la url del video con la voz clonada:
     "url": "https://videoscloned.s3.amazonaws.com/Mona%20Lisa%20Video.mp4?AWSAccessKeyId=AKIAJX5RO26LV35IZV3Q&Signature=q8X7mejdEJNki8Ywp6jer6aChYI%3D&Expires=1608227919"
 }
 ```
+## Buckets a utilizar
+
+* originalvoices : aqui se subiran todas las voces que se desee clonar *.wav
+* clonedvoices : todas las voces clonadas generadas se guardarán e este bucket
+* videosoriginal : aqui se suben todos los videos o imagenes para clonar *.jpg *.mp4
+* videoscloned : todos los videos generados de la clonación se guardan aqui *.mp4
