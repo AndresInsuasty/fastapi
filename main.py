@@ -1,6 +1,13 @@
+import boto3
 from fastapi import FastAPI
 from utils.uploads3 import create_presigned_post, list_elements, create_presigned_url
 app = FastAPI()
+
+client = boto3.client(
+    's3',
+    aws_access_key_id='AKIAJX5RO26LV35IZV3Q',
+    aws_secret_access_key='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',
+)
 
 @app.get("/upload/{bucket}/{filename}")
 async def root(bucket: str, filename: str):
