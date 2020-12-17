@@ -35,11 +35,11 @@ If you have issues with the functions of uploads3.py I recommend change the regi
 ## Como subir un archivo
 vamos a suponer que tenemos el bucket llamado `fastapi2` y el archivo `readme.md`, entonces debemos hacer una peticion GET a la API como la siguiente estructura:
 
-`[DIRECCION_IP]/uploadvoice/[NOMBRE_BUCKET]/[NOMBRE_ARCHIVO]`
+`[DIRECCION_IP]/upload/[NOMBRE_BUCKET]/[NOMBRE_ARCHIVO]`
 
 Observa el siguiente ejemplo:
 
-`http://localhost:8000/uploadvoice/fastapi2/readme.md`
+`http://localhost:8000/upload/fastapi2/readme.md`
 
 La respuesta de esta petición es la siguiente:
 

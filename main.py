@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from utils.uploads3 import create_presigned_post, list_elements, create_presigned_url
 app = FastAPI()
 
-@app.get("/uploadvoice/{bucket}/{filename}")
+@app.get("/upload/{bucket}/{filename}")
 async def root(bucket: str, filename: str):
     return create_presigned_post(bucket,filename)
 
