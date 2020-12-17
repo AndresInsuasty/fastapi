@@ -79,12 +79,12 @@ def create_presigned_post(bucket_name, object_name,
     return response
 
 
-bucket_name = 'fastapi2'
-filename = 'Readme.md'
+#bucket_name = 'fastapi2'
+#filename = 'Readme.md'
 
 # print(list_buckets())
 # upload_file(filename,bucket_name)
 # delete_file(filename,bucket_name)
 # print(list_elements(bucket_name))
 # print(create_presigned_url(bucket_name,filename,expiration=3600))
-#print(create_presigned_post(bucket_name,filename,expiration=1000))
+# print(create_presigned_post(bucket_name,filename,expiration=1000))

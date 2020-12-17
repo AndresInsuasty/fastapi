@@ -31,5 +31,3 @@ you will find a function into the utils folder called `uploads3.py` to use it pl
 
 So open a terminal and write `aws configure` after this enter your keys. In the section of region I wrote `us-east-1`
 If you have issues with the functions of uploads3.py I recommend change the region of your bucket to `us-west-2`
-
-
