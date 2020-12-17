@@ -121,3 +121,20 @@ el resultado tiene la url del archivo .wav con la voz clonada:
 ```
 
 
+## Generar un video clonado
+
+Para generar un video de clonado de voz debemos seleccionar la voz clonada y el video al que se va a montar la voz y hacer una petición GET.
+La estructura de la petición será:
+
+`[DIRECCION IP]/generatevideo/[AUDIO CLONADO GENERADO]/[VIDEO ORIGINAL PARA MONTAR AUDIO]`
+
+ejemplo:
+
+`http://localhost:8000/generatevideo/duque.wav/John F. Kennedy.mp4`
+
+la respuesta sera la url del video con la voz clonada:
+```
+{
+    "url": "https://videoscloned.s3.amazonaws.com/Mona%20Lisa%20Video.mp4?AWSAccessKeyId=AKIAJX5RO26LV35IZV3Q&Signature=q8X7mejdEJNki8Ywp6jer6aChYI%3D&Expires=1608227919"
+}
+```

@@ -16,3 +16,9 @@ async def root(text: str,bucket: str, voice_filename: str):
     voice = list_elements('clonedvoices')
     
     return {"url":create_presigned_url('clonedvoices',voice[0])}
+
+@app.get("/generatevideo/{voice_filename}/{video_filename}")
+async def root(voice_filename: str,video_filename: str):
+    #funcion para generar voz clonada
+    video = list_elements('videoscloned')
+    return {"url":create_presigned_url('videoscloned',video[0])}
